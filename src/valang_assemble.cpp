@@ -17,7 +17,7 @@ int main(int argc, const char* argv[])
 			throw Exception("Input pattern: valang_assemble <src> --std=<std> <dest>", PROGRAM_POS);
 		}
 
-		if (std::strcmp(argv[2], "--std=1") == 0) AssemblerStd1::assemble(argv[1], argv[3]);
+		if (std::strcmp(argv[2], "--std=2") == 0) AssemblerStd1::assemble(argv[1], argv[3]);
 		else throw Exception("Unknown standard", PROGRAM_POS);
 	}
 	catch (Exception& ex)

@@ -38,7 +38,7 @@ namespace MyStd1
 	using   StdNum_t = unsigned char;
 
 	MagicNum_t MAGIC_NUM = 0xBA;
-	StdNum_t STD_NUM = 1;
+	StdNum_t STD_NUM = 2;
 
 	const char*  INPUT_FORMAT = "%lf";
 	const char* OUTPUT_FORMAT = "%.03lf\n";	
