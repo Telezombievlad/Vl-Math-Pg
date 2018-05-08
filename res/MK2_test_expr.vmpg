@@ -1,0 +1,14 @@
+def test_expression_0(a, b)
+{
+	return (a * (4 + b) - 7)/3;
+}
+
+def test_comaprison_0(a, b)
+{
+	return a < b;
+}
+
+def main()
+{
+	return test_expression_0(2, 7);
+}

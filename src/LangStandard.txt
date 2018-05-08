@@ -1,0 +1,53 @@
+VlMathPG - VLadik's MATHematical PlayGround
+
+==================================================================================
+== LANGUAGE CONSTRUCTS MK.2
+==================================================================================
+
+SPACE            ::= "[ \t\n]+"
+PREPROCESSOR_CMD ::= "#[a-z_#]+"
+VARIABLE         ::= "[a-z][a-zA-Z0-9_]*"
+TYPE             ::= "[A-Z][a-zA-Z0-9]"
+OPERATOR         ::= "[!%%&*+\\-./:<=>?@^|~]+"
+NUMBER           ::= "-?(0|[1-9][0-9]*)(\\.[0-9]+)?"
+BRACKET          ::= "[\\(\\)\\{\\}]"
+COMMA            ::= ","
+SEMICOLON        ::= ";"
+
+==================================================================================
+== LANGUAGE GRAMMAR MK.2
+==================================================================================
+
+// Simple expresions:
+Num  ::= NUMBER
+Var  ::= VARIABLE (variable name but not function name)  
+Call ::= Func (E?{,E}*) (Func ::= VARIABLE (function name) is not an expression itself)
+
+// Expression:
+E      ::= E_Or
+E_Or   ::= E_And{||E_And}*
+E_And  ::= E_Eq{&&E_Eq}*
+E_Eq   ::= E_Comp{['==' '!=']E_Comp}?
+E_Comp ::= E_Sum{['<' '>' '<=' '>=']E_Sum}?
+E_Sum  ::= E_Mul{[+-]E_Mul}*
+E_Mul  ::= E_Un{[*/]E_Un}*
+E_Un   ::= [+-]?E_Val
+E_Val  ::= (E)|Num|Var|Call
+
+// Statements:
+Assign ::= Var = E;
+If     ::= if (E) Cd {else Cd}?
+While  ::= while (E) Cd
+Return ::= return E;
+Print  ::= print(E);
+
+St ::= Assign|If|While|Print|Return
+
+Cd ::= St|{ St* } // Cd stands for Code (instead of senseless G)
+
+// Definitions:
+DefVar  ::= var Id = E;
+DefFunc ::= def Id(Id?{,Id}*) Cd
+
+// Program:
+Pg ::= DefFunc

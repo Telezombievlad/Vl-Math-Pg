@@ -1,0 +1,24 @@
+def test_if(cond, r_true, r_false)
+{
+	if (cond) return r_true;
+	else return r_false; 
+}
+
+def while_mul(a, b)
+{
+	var toReturn = 0;
+	var i = 0;
+	
+	while (i < b)
+	{
+		toReturn = toReturn + a;
+		i = i + 1;
+	}
+
+	return toReturn;
+}
+
+def main()
+{
+	return while_mul(11, 7);
+}

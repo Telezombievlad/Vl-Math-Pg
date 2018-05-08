@@ -1,0 +1,25 @@
+def fibonacci(n)
+{
+	if (n <= 1) return 1;
+	
+	var i = 2;
+	var acc0 = 1;
+	var acc1 = 1;
+	var acc2 = 2;
+	while (i < n)
+	{
+		acc2 = acc0 + acc1;
+		acc0 = acc1;
+		acc1 = acc2;
+		i = i + 1;
+	}
+
+	return acc2;
+}
+
+def main()
+{
+	var fib = fibonacci(10);
+
+	return fib;
+}

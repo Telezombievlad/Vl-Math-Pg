@@ -1,0 +1,19 @@
+def zero_p()
+{
+	return 0;
+}
+
+def one_p(a)
+{
+	return a;
+}
+
+def two_p(a, b)
+{
+	return a + b;
+}
+
+def main()
+{
+	return two_p(4, 5);
+}
