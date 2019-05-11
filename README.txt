@@ -12,7 +12,7 @@ It will generate .valang and .vacode files in the <res_folder> folder. The first
 6) TO EXECUTE, open terminal and call (from Vl-Math-PG folder):
 ./vl_math_pg_execute <path/to/command/file.vacode>
 
-This one will emulate the REAL VIRTUAL PROCESSOR (holy shift?! holy shift!!! OMFG!!!) and execute the code (F yeah)
+This one will emulate the REAL VIRTUAL PROCESSOR and execute the code
 
 *************************************************************
 * To code in Vl-Math-Pg language watch src/LangStandard.txt *
