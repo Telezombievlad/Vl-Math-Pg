@@ -1,3 +1,6 @@
+(0___0) So sad i didn't knew makefiles back then (0___0)
+----------------------------
+
 How to set it all working:
 1) Download the project folder somewhere onto your computer. Call it Vl-Math-PG
 2) Create bin folder in Vl-Math-PG
